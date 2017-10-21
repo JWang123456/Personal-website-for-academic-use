@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title> Contact me </title>
+		
+		<meta charset="UTF-8"/> 
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name = "keywords" content = "homework1, HTML, CSS, Gaojie"/>
+		<meta name = "author" content="Gaojie Wang"/> 
+		
+		<style>
+			input:invalid {
+				border: 2px dashed red;
+			}
+
+			input:valid {
+			border: 2px solid black;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<header>
+			<h1>Contact me</h1>
+	
+		</header>
+	
+		
+		<form>
+			Name:<br/>
+			<input type = "text" name = "name" required><br/>
+			Age:<br/>
+			<input type = "number" min = "1" max = "100" name = "age" required><br/>
+			Email:<br/>
+			<input type = "email" name = "email" required><br/>
+			Password:<br/>
+			<input type = "password" name = "password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br/>
+			Tel-number:<br/>
+			<input type = "number" name = "number"><br/>
+			
+	
+			<br/>
+		
+			Geyder
+			<br/>
+			<input type = "radio" required name = "name" value = "male">male<br/>
+			<input type = "radio" required name = "name" value = "female">female<br/>
+			<br/>
+			Course Taken:<br/>
+			<input type = "checkbox" name = "course" value = "cs6314"> cs6314<br/>
+			<input type = "checkbox" name = "course" value = "cs6375"> cs6375<br/>
+			<input type = "checkbox" name = "course" value = "cs6301"> cs6301<br/>
+			<input type = "reset">
+			<input type = "submit">
+		</form>
+			
+		
+	</body>
+	
+</html>

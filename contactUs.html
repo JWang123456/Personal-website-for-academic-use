@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title> Contact me </title>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8"/>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name = "keywords" content = "homework1, HTML, CSS, Gaojie"/>
+        <meta name = "author" content="Gaojie Wang"/>
+         <!--Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+			table, td {
+				border: 2px solid black;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header>
+			<h1>Contact me</h1>
+		</header>
+
+		<table id="table1" contenteditable="true">
+
+			<tr contenteditable="false" style="background-color: #6ed8c8; height: 50px">
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Email Address</td>
+				<td>Telephone Number</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td class="data">First Name1</td>
+				<td class="data">Last Name1</td>
+				<td class="data">Email Address1</td>
+				<td class="data">Telephone Number1</td>
+				<td contenteditable="false"><button onclick ="deleterow(this)">Delete</button></td>
+			</tr>
+
+			<tr>
+				<td class="data">First Name2</td>
+				<td class="data">Last Name2</td>
+				<td class="data">Email Address2</td>
+				<td class="data">Telephone Number2</td>
+				<td contenteditable="false"><button onclick ="deleterow(this)">Delete</button></td>
+			</tr >
+
+			<tr>
+				<td class="data">First Name3</td>
+				<td class="data">Last Name3</td>
+				<td class="data">Email Address3</td>
+				<td class="data">Telephone Number3</td>
+				<td contenteditable="false"><button onclick ="deleterow(this)">Delete</button></td>
+			</tr>
+
+		</table>
+		<br/>
+		<button onclick ="addrow()">Add</button>
+
+        <script>
+
+            $('.data').on('mouseenter', function () {
+                if (event.altKey) {
+                    this.style.color='red'
+                    this.style.backgroundColor='blue'
+                }
+            })
+
+            $('.data').on('mouseleave', function () {
+                this.style.color='black'
+                this.style.backgroundColor='white'
+            })
+
+
+            function addrow(){
+                var table = document.getElementById("table1");
+                var row = table.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                cell1.innerHTML = "<td class=\"data\"></td>";
+                cell2.innerHTML = "<td class=\"data\"></td>";
+                cell3.innerHTML = "<td class=\"data\"></td>";
+                cell4.innerHTML = "<td class=\"data\"></td>";
+                cell5.innerHTML = "<td contenteditable=\"false\"><button onclick =\"deleterow(this)\">Delete</button></td>";
+            }
+            function deleterow(r){
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+            }
+
+        </script>
+
+	</body>
+
+</html>

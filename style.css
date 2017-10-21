@@ -1,0 +1,49 @@
+	
+ul li{
+	color: red;
+}
+li li{
+	color: blue;
+}
+
+li.programming{
+	background-color: red;
+}
+li.web{
+	background-color: blue;
+}
+
+#ab {
+	color: red;
+}
+#ps{
+	color: blue;
+} 
+#mo{
+	color: green;
+} 
+#ml{
+	color: orange;
+}
+
+li.ide{
+	background-color: green;
+}
+li.data{
+	background-color: orange;
+}
+#e.ide{
+	color: red;
+}
+#p.ide{
+	color: red;
+}
+#mysql{
+	color: blue;
+}
+#sql{
+	color: blue;
+}
+#ac{
+	color: blue;
+}
